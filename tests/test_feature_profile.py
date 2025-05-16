@@ -17,7 +17,7 @@ class TestFeatureProfile(TestBase):
         # print(self.data.LOGIN)
         self.login_page.enter_password(self.data.PASSWORD)
         # print(self.data.PASSWORD)
-        # self.login_page.submit_button()
+        self.login_page.submit_button()
         # driver = webdriver.Chrome()
         # print(driver.current_url)
         self.dashboard_page.is_opened()
