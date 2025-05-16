@@ -19,7 +19,7 @@ jobs:
       - name: Install Docker Compose
         run: |
           sudo apt update
-          sudo apt install docker-compose-plugin #или docker-compose
+          sudo apt install docker-compose
 
       - name: Run UI-tests via docker-compose
         env:
