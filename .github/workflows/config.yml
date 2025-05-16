@@ -16,6 +16,11 @@ jobs:
       #     ref: gh-pages
       #     path: ./.github/gh-pages
 
+      - name: Install Docker Compose
+        run: |
+          sudo apt update
+          sudo apt install docker-compose-plugin #или docker-compose
+
       - name: Run UI-tests via docker-compose
         env:
           LOGIN: ${{ secrets.LOGIN }}
