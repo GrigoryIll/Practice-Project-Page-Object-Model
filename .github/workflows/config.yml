@@ -20,6 +20,11 @@ jobs:
         run: |
           sudo apt update
           sudo apt install docker-compose
+          
+      - name: Check LOGIN and PASSWORD
+        run: |
+          echo "LOGIN is set (length): ${{ secrets.LOGIN }}" | wc -c
+          echo "PASSWORD is set (length): ${{ secrets.PASSWORD }}" | wc -c
 
       - name: Run UI-tests via docker-compose
         env:
