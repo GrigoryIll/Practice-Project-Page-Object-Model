@@ -27,6 +27,8 @@ class PersonalPage(BasePage):
 
     @allure.step("Saved successfully")
     def is_changes_saved(self):
+        self.wait.until(EC.invisibility_of_element_located
+                        (self.SPINNER))
         self.wait.until(EC.visibility_of_all_elements_located
                         (self.FIRST_NAME_FIELD))
         self.wait.until(EC.text_to_be_present_in_element_value(
