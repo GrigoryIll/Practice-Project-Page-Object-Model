@@ -1,0 +1,6 @@
+.pytest_cache
+*.iml
+.env
+report
+allure-results
+.vscode
