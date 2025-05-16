@@ -16,15 +16,15 @@ jobs:
       #     ref: gh-pages
       #     path: ./.github/gh-pages
 
-      - name: Install Docker Compose
-        run: |
-          sudo apt update
-          sudo apt install docker-compose
+      # - name: Install Docker Compose
+      #   run: |
+      #     sudo apt update
+      #     sudo apt install docker-compose
 
       - name: Check LOGIN and PASSWORD
         run: |
-          echo "LOGIN is $secrets.LOGIN $LOGIN"
-          echo "PASSWORD is $secrets.PASSWORD $PASSWORD" 
+          echo "LOGIN is $LOGIN"
+          echo "PASSWORD is $PASSWORD" 
 
       - name: Run UI-tests via docker-compose
         env:
