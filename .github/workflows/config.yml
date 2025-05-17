@@ -23,8 +23,8 @@ jobs:
 
       - name: Check LOGIN and PASSWORD
         run: |
-          echo "LOGIN is $secrets.LOGIN"
-          echo "PASSWORD is $secrets.PASSWORD" 
+          echo "Login: ${{ secrets.LOGIN }}"
+          echo "Password: ${{ secrets.PASSWORD }}"
 
       - name: Run UI-tests via docker-compose
         env:
